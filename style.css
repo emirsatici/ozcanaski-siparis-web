@@ -1,0 +1,5 @@
+
+body { font-family: Arial; background: #f9f9f9; padding: 2rem; }
+.container { max-width: 600px; margin: auto; background: white; padding: 2rem; text-align: center; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+a { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #007bff; color: white; border-radius: 5px; text-decoration: none; }
+a:hover { background: #0056b3; }
