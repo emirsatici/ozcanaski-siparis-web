@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Özcan Askı Sipariş Paneli</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Özcan Askı Sipariş Paneli</h1>
+    <input id="username" placeholder="Kullanıcı Adı" />
+    <input id="password" type="password" placeholder="Şifre" />
+    <button onclick="login()">Giriş Yap</button>
+    <p id="error" class="error"></p>
+  </div>
+  <div id="panel" class="hidden">
+    <h2 id="panelTitle"></h2>
+    <div class="form" id="orderForm">
+      <input id="branch" placeholder="Şube Adı" />
+      <input id="product" placeholder="Ürün Adı" />
+      <input id="quantity" type="number" placeholder="Adet" />
+      <textarea id="note" placeholder="Not"></textarea>
+      <select id="type">
+        <option>Normal</option>
+        <option>Kargo</option>
+        <option>Ambar</option>
+      </select>
+      <button onclick="addOrder()">Sipariş Gönder</button>
+    </div>
+    <div class="filters">
+      <button onclick="filterOrders('Tümü')">Tümü</button>
+      <button onclick="filterOrders('Normal')">Normal</button>
+      <button onclick="filterOrders('Kargo')">Kargo</button>
+      <button onclick="filterOrders('Ambar')">Ambar</button>
+      <button onclick="exportPDF()">PDF Yazdır</button>
+    </div>
+    <div id="orders"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
